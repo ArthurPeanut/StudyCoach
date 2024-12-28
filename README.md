@@ -2,7 +2,6 @@
 
 A full stack app that stores you tasks, displays them on calendar, with chatgpt API to summarize study files and store them as knowledge base. Developed with stack MERN.
 
-
 ## Code Chronicles
 
 **[2024-12-28 16:46]**
@@ -14,3 +13,8 @@ A full stack app that stores you tasks, displays them on calendar, with chatgpt 
 -Conneted to the database
 
 -Added new collections to it
+
+
+**[2024-12-28 16:54]**
+
+-Created an error handler middleware
