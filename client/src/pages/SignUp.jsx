@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   Input,
   Button,
@@ -28,6 +28,9 @@ export default function SignUp() {
   const doSubmit = async values => {
     // Used react-hot-toast 
     // toast.success('Sign Up Successful. You are now logged in');
+
+    const { updateUser } = useUser();
+    const navigate = useNavigate();
     
     try {
       const res = await fetch(`${API_BASE_URL}/auth/signup`, {
@@ -40,6 +43,8 @@ export default function SignUp() {
       const data = await res.json();
       if (res.status === 200) {
         toast.success('Sign Up Successful. You are now logged in');
+        updateUser(data);
+        navigate('/profile');
       } else {
         toast.error(data.message);
       }

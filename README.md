@@ -22,3 +22,9 @@ A full stack app that stores you tasks, displays them on calendar, with chatgpt 
 -Introduced chakra-ui.
 
 -Created logup form with error handling.
+
+**[2024-12-28 21:23]**
+-Modify configurations in CORS by adding frontend URL.
+
+**[2024-12-28 21:38]**
+-Utilized Context to share prop within components.
