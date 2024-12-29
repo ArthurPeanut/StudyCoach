@@ -65,6 +65,9 @@ export default function NavBar() {
                 <MenuItem as={RouterLink} to='/tasks'>
                   Tasks
                 </MenuItem>
+                <MenuItem as={RouterLink} to='/summaries'>
+                  Knowledge Base
+                </MenuItem>
                 <MenuItem onClick={handleSignOut}>Sign Out</MenuItem>
               </MenuList>
             </Menu>

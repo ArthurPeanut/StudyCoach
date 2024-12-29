@@ -6,6 +6,7 @@ import 'dotenv/config';
 import userRouter from './routes/user.route.js';
 import authRouter from './routes/auth.route.js';
 import taskRouter from './routes/task.route.js';
+import summaryRouter from './routes/summary.route.js'
 
 import { errorHandler } from './libs/middleware.js';
 

@@ -10,6 +10,7 @@ import CreateTask from './pages/CreateTask';
 import UpdateTask from './pages/UpdateTask';
 import Tasks from './pages/Tasks';
 import SingleTask from './pages/SingleTask';
+import SummaryPage from './pages/SummaryPage';
 
 import { UserProvider } from './context/UserContext';
 import PrivateRoute from './components/PrivateRoute';
@@ -35,6 +36,7 @@ export default function App() {
               <Route path='/update-task/:taskId' element={<UpdateTask />} />
               <Route path='/tasks' element={<Tasks />} />
               <Route path='/tasks/:taskId' element={<SingleTask />} />
+              <Route path='/summaries' element={<SummaryPage />} />
             </Route>
           </Routes>
         </BrowserRouter>
