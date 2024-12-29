@@ -29,11 +29,13 @@ export const signup = async (req, res, next) => {
 
         const { insertedId } = await collection.insertOne(user);
         
-        // Create a JWT token
+        // Create a JWT token with jwt.sign()
         // pass the id object as the data stored on the token
         const token = jwt.sign({ id: insertedId }, process.env.AUTH_SECRET);
         user._id = insertedId;
+        // rest contains the data of a user except password, updateAt and createdAt
         const { password: pass, updatedAt, createdAt, ...rest } = user;
+        // return rest as json file
         res
             .cookie('taskly_token', token, { httpOnly: true })
             .status(200)

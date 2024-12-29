@@ -16,6 +16,7 @@ import {
 import { BsChevronLeft } from 'react-icons/bs';
 import DeleteConfirmation from '../components/DeleteConfirmation';
 import SingleTaskSkeleton from '../_skeletons/SingleTaskSkeleton';
+import toast from 'react-hot-toast';
 
 export default function SingleTask() {
   const [task, setTask] = useState();

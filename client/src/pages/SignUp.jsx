@@ -13,10 +13,11 @@ import {
 } from '@chakra-ui/react';
 import toast from 'react-hot-toast';
 import { API_BASE_URL } from '../util.js'
+import { useUser } from '../context/UserContext.jsx'
 
 // When the form is submitted (via the onSubmit event handler), 
 // the handleSubmit function gathers all the form data into a single 
-// values object and passes it to your custom doSubmit function.
+// values object and passes it to custom doSubmit function.
 
 export default function SignUp() {
   const {
@@ -25,13 +26,13 @@ export default function SignUp() {
     formState: { errors, isSubmitting },
   } = useForm();
 
+  const { updateUser } = useUser();
+  const navigate = useNavigate();
+
   const doSubmit = async values => {
     // Used react-hot-toast 
     // toast.success('Sign Up Successful. You are now logged in');
 
-    const { updateUser } = useUser();
-    const navigate = useNavigate();
-    
     try {
       const res = await fetch(`${API_BASE_URL}/auth/signup`, {
         method: 'POST',

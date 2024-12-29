@@ -36,3 +36,6 @@ A full stack app that stores you tasks, displays them on calendar, with chatgpt 
 
 -Updated a navbar.
 
+**[2024-12-29 17:05]**
+
+-Updated the home page, task page and updating task page.

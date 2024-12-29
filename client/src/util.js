@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+// Access the global localStorage object, provided by JS,
+// through Web Storage API
+
 export const useLocalStorage = (key, defaultValue) => {
     const [value, setValue] = useState(() => {
       const currentValue = localStorage.getItem(key);
@@ -13,7 +16,7 @@ export const useLocalStorage = (key, defaultValue) => {
   
     useEffect(() => {
       localStorage.setItem(key, JSON.stringify(value));
-    }, [value]);
+    }, [key, value]);
   
     return [value, setValue];
   };
